@@ -63,7 +63,7 @@ namespace ChatPaletMaker
                         }
                         if (Regex.IsMatch(line, "(名称|価格合計)")) break;
                         list = line.Split(' ').ToList();
-                        try { dice = list.First(s => Regex.IsMatch(s, @"\dr")); }
+                        try { dice = list.First(s => Regex.IsMatch(s, @"\d+r")); }
                         catch { break; }
 
                         list.Remove(dice);
