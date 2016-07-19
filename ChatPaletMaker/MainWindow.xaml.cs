@@ -23,6 +23,16 @@ namespace ChatPaletMaker
         public MainWindow()
         {
             InitializeComponent();
+            textBox1.AcceptsReturn = true;
+            textBox1.TextWrapping = TextWrapping.Wrap;
+            textBox2.AcceptsReturn = true;
+            textBox2.TextWrapping = TextWrapping.Wrap;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            string result = Logic.Make(textBox1.Text.Split('\n'));
+            textBox2.Text = result;
         }
     }
 }

@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatPaletMaker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="524.71" Width="525">
     <Grid>
-        
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="171" Margin="53,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Text="ここに貼り付ける"/>
+        <Button x:Name="button" Content="押す" HorizontalAlignment="Left" Height="28" Margin="67,220,0,0" VerticalAlignment="Top" Width="110" Click="button_Click"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="171" Margin="53,271,0,0" TextWrapping="Wrap" Text="ここが出力" VerticalAlignment="Top" Width="418"/>
+
     </Grid>
 </Window>
