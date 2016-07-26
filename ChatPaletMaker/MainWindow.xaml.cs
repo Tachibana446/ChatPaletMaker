@@ -34,5 +34,22 @@ namespace ChatPaletMaker
             string result = Logic.Make(textBox1.Text.Split('\n'));
             textBox2.Text = result;
         }
+
+        private void clearButton_Click(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void pasteButton_Click(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "";
+            textBox1.Paste();
+        }
+
+        private void copyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(textBox2.Text);
+        }
     }
 }

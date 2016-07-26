@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatPaletMaker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="524.71" Width="525">
+        Title="MainWindow" Height="564.71" Width="525">
     <Grid>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="171" Margin="53,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Text="ここに貼り付ける"/>
-        <Button x:Name="button" Content="押す" HorizontalAlignment="Left" Height="28" Margin="67,220,0,0" VerticalAlignment="Top" Width="110" Click="button_Click"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="171" Margin="53,271,0,0" TextWrapping="Wrap" Text="ここが出力" VerticalAlignment="Top" Width="418"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="203" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Text="ここに貼り付ける" Grid.Column="1"/>
+        <Button x:Name="button" Content="押す" HorizontalAlignment="Left" Height="28" Margin="24,297,0,0" VerticalAlignment="Top" Width="110" Click="button_Click" Grid.Column="1"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="171" Margin="10,348,0,0" TextWrapping="Wrap" Text="ここが出力" VerticalAlignment="Top" Width="418" Grid.Column="1"/>
+        <Button x:Name="clearButton" Content="クリア" HorizontalAlignment="Left" Height="28" Margin="139,297,0,0" VerticalAlignment="Top" Width="110" Click="clearButton_Click" Grid.Column="1"/>
+        <Button x:Name="pasteButton" Grid.ColumnSpan="2" Content="ペースト" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="75" Click="pasteButton_Click"/>
+        <Button x:Name="copyButton" Grid.ColumnSpan="2" Content="コピー" HorizontalAlignment="Left" Margin="90,43,0,0" VerticalAlignment="Top" Width="75" Click="copyButton_Click"/>
 
     </Grid>
 </Window>
